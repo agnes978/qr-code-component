@@ -1,5 +1,4 @@
 /** Reset **/
-
 *, 
 *::after, 
 *::before {
@@ -10,7 +9,7 @@ body,
 h1,
 h2,
 p {
-  margin: 0;
+    margin: 0;
 }
 
 img {
@@ -18,9 +17,7 @@ img {
     display: block;
 }
 
-
 /** Variables **/
-
 :root {
     /* Colors */
     --clr-white: hsl(0, 0%, 100%);
@@ -30,39 +27,39 @@ img {
   
     /* Fonts */
     --ff-outfit: "Outfit", sans-serif; 
+    --fs-400: 15px;
 }
 
-
 /** Base Styles **/
-
-html {
-    font-size: 15px;
+html,
+body {
+    font-size: var(--fs-400);
+    font-family: var(--ff-outfit);
 }
 
 body {
     min-height: 100vh;
-    font-family: var(--ff-outfit);
-    line-height: 1.2;
     background-color: var(--clr-light-gray);
 }
 
 h2,
 .card-title {
     font-size: 1.25rem;
-    /* font-weight: 700; */
+    font-weight: 700;
+    line-height: 1.3;
     color: var(--clr-dark-blue);
     margin: 1.2em 0 .8em;
 }
 
 p,
 .card-text {
-    /* font-weight: 400; */
+    /* font-size: 1rem; */
+    font-weight: 400;
+    line-height: 1.1;
     color: var(--clr-grayish-blue);
 }
 
-
 /** Layout **/
-
 .container {
     position: absolute;
     top: 50%;
@@ -70,27 +67,15 @@ p,
     transform: translate(-50%, -50%);
 }
 
-
-/** Components **/
-
-/*
-***
-* Card 
-***
-* .card
-*  |_.card-img
-*  |_.card-body
-*      |_.card-title
-*      |_.card-text
-***
-*/
-
+/** Components **/  
+/* Card */
 .card {
-    width: 320px;
+    width: 300px;
     text-align: center;
     background-color: var(--clr-white);
     border-radius: 20px;
-    padding: 15px;
+    padding: 1.2rem;
+    box-shadow: rgba(76, 78, 81, 0.2) 0px 8px 24px;
 }
 
 .card-img {
@@ -98,7 +83,6 @@ p,
 }
 
 .card-body {
-    padding: 0 15px;
-    margin-bottom: 30px;
+    padding: 0 1em;
+    margin-bottom: .8em;
 }
-
