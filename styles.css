@@ -1,0 +1,104 @@
+/** Reset **/
+
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/** Variables **/
+
+:root {
+    /* Colors */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-gray: hsl(212, 45%, 89%);
+    --clr-grayish-blue: hsl(220, 15%, 55%);
+    --clr-dark-blue: hsl(218, 44%, 22%);
+  
+    /* Fonts */
+    --ff-outfit: "Outfit", sans-serif; 
+}
+
+
+/** Base Styles **/
+
+html {
+    font-size: 15px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--ff-outfit);
+    line-height: 1.2;
+    background-color: var(--clr-light-gray);
+}
+
+h2,
+.card-title {
+    font-size: 1.25rem;
+    /* font-weight: 700; */
+    color: var(--clr-dark-blue);
+    margin: 1.2em 0 .8em;
+}
+
+p,
+.card-text {
+    /* font-weight: 400; */
+    color: var(--clr-grayish-blue);
+}
+
+
+/** Layout **/
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/** Components **/
+
+/*
+***
+* Card 
+***
+* .card
+*  |_.card-img
+*  |_.card-body
+*      |_.card-title
+*      |_.card-text
+***
+*/
+
+.card {
+    width: 320px;
+    text-align: center;
+    background-color: var(--clr-white);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.card-img {
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
